@@ -1,10 +1,23 @@
-# Customer Churn Prediction (Starter Template)
+# Customer Churn Prediction
 
-This is a **ready-to-run** starter project for a simple customer churn model using Python and scikit-learn.
+📉 This project demonstrates a machine learning model for predicting customer churn.
 
-## Tech Stack
-- Python 3.10+
-- pandas, numpy, scikit-learn
+---
+
+## 🔧 Tech Stack
+- Python, Pandas, NumPy
+- scikit-learn (Logistic Regression, Random Forest baseline)
+- Jupyter Notebook
+
+---
+
+## 📂 Project Structure
+churn-prediction/
+data/
+churn_synthetic.csv
+churn.ipynb
+requirements.txt
+README.md  
 
 ## Quickstart
 ```bash
@@ -22,6 +35,9 @@ jupyter notebook churn.ipynb
 - `data/churn_synthetic.csv` – tiny synthetic dataset (no PII)
 - `churn.ipynb` – notebook with EDA, train/test split, logistic regression, metrics
 - `requirements.txt` – minimal dependencies
+
+-  ![Churn Prediction Demo](churn-demo.png)
+
 
 ## How to Talk About This Project
 - Business Framing: “Predict probability of churn for proactive retention.”
