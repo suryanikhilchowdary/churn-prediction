@@ -28,3 +28,4 @@ jupyter notebook churn.ipynb
 - Features: demo demographics + usage signals
 - Metrics: Accuracy, F1, ROC-AUC
 - Next Steps: feature engineering, class imbalance handling, advanced models (XGBoost/LightGBM), calibration, cost-based thresholds
+- 
