@@ -1,8 +1,12 @@
 pandas
 numpy
+<<<<<<< HEAD
 matplotlib
 seaborn
 scikit-learn
 tensorflow
 keras
 jupyter
+=======
+scikit-learn
+>>>>>>> ce0595e12bac7b848eb5083916f04321d6a7bd77
