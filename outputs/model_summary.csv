@@ -1,0 +1,4 @@
+Model,Accuracy,Best
+Logistic Regression,38.05,No
+Random Forest,38.5,No
+Deep Learning,41.95,Yes
