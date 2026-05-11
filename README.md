@@ -1,49 +1,75 @@
-🏥 Healthcare Patient Stay Prediction
+# 🏥 Healthcare Patient Stay Prediction
 
-Predicting how long a patient will stay in hospital using Machine Learning and Deep Learning.
+Predicting hospital length of stay (11 classes) from 318k+ patient records 
+using classical ML and deep learning, with results visualized in Power BI.
 
-📊 Results
-| Model | Accuracy |
-|-------|----------|
-| Logistic Regression | 38.05% |
-| Random Forest | 38.50% |
-| Deep Learning (Keras) | **41.95%** ✅ |
-11-class classification problem; random baseline = 9%, majority-class baseline ≈ 28%. Deep learning model achieves ~1.5x improvement over majority baseline.
+## 📌 Problem
 
- 🛠️ Tech Stack
-- **Python** — Data processing & modeling
-- **Pandas, NumPy** — Data manipulation
-- **Scikit-learn** — ML models & preprocessing
-- **TensorFlow / Keras** — Deep Learning
-- **Matplotlib, Seaborn** — Visualizations
-- **Power BI** — Interactive dashboard
-- **Git & GitHub** — Version control
+Hospitals need to forecast patient length of stay to plan bed allocation, 
+staffing, and discharge logistics. Accurate predictions reduce overcrowding 
+and improve resource utilization. This project builds and compares models 
+to predict stay duration across 11 bucketed classes.
 
-📁 Project Structure
-churn-prediction/
-├── data/healthcare/       ← Raw dataset
-├── notebooks/             ← Jupyter notebooks
+## 📊 Dataset
+
+- **Size:** 318,438 patient admission records
+- **Target:** Stay duration (11 classes, e.g. "0-10 days", "11-20 days"... "More than 100 days")
+- **Features:** Hospital type, ward, admission deposit, severity of illness, age, etc.
+- **Source:** [AnalyticsVidhya Healthcare Hackathon] *(update if different)*
+
+## 🛠️ Approach
+
+1. **EDA** — Explored class imbalance, feature distributions, missingness
+2. **Preprocessing** — Encoded categoricals, handled missing values, scaled numerics
+3. **Baseline ML** — Logistic Regression, Random Forest
+4. **Deep Learning** — Keras feedforward network with dropout
+5. **Evaluation** — Accuracy, weighted F1, confusion matrix
+
+## 📈 Results
+
+| Model | Accuracy | Weighted F1 |
+|---|---|---|
+| Majority Class Baseline | ~28% | — |
+| Logistic Regression | 38.05% | *(add)* |
+| Random Forest | 38.50% | *(add)* |
+| **Deep Learning (Keras)** | **41.95%** ✅ | *(add)* |
+
+*11-class problem; random baseline = 9%. Deep learning achieves ~1.5x majority baseline.*
+
+## 📊 Power BI Dashboard
+
+![Dashboard](reports/dashboard.png)
+
+Interactive dashboard built from model predictions for hospital operations teams.
+
+## 🗂️ Project Structure
+
+​```
+healthcare-patient-stay-prediction/
+├── data/healthcare/              # Raw dataset
+├── notebooks/
 │   ├── 01_EDA.ipynb
 │   ├── 02_Preprocessing.ipynb
 │   ├── 03_ML_Models.ipynb
 │   ├── 04_DeepLearning.ipynb
 │   └── 05_Evaluation.ipynb
-├── models/                ← Saved trained model
-├── outputs/               ← CSV exports for Power BI
-├── reports/               ← Charts & Power BI dashboard 
+├── models/                       # Saved trained models (.keras)
+├── outputs/                      # CSV exports for Power BI
+├── reports/                      # Charts & Power BI dashboard
 └── requirements.txt
-🚀 How to Run
-1. Clone the repo
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run notebooks in order (01 → 05)
-4. Open Power BI dashboard in `reports/`
+​```
 
-📈 Dashboard
-Built in Power BI showing:
-- Model accuracy comparison
-- Patient stay distribution
-- Actual vs predicted stay
-- Key KPI metrics
+## 🛠️ Tech Stack
 
-👤 Author
-Surya Nikhil Chowdary
+**Python · Pandas · NumPy · Scikit-learn · TensorFlow/Keras · Matplotlib · Seaborn · Power BI · Git**
+
+## 🚀 How to Run
+
+​```bash
+git clone https://github.com/suryanikhilchowdary/healthcare-patient-stay-prediction.git
+cd healthcare-patient-stay-prediction
+pip install -r requirements.txt
+jupyter notebook
+​```
+
+Run notebooks in order: `01` → `02` → `03` → `04` → `05`.
