@@ -29,7 +29,7 @@ churn-prediction/
 │   └── 05_Evaluation.ipynb
 ├── models/                ← Saved trained model
 ├── outputs/               ← CSV exports for Power BI
-├── reports/               ← Charts & Power BI dashboard
+├── reports/               ← Charts & Power BI dashboard 
 └── requirements.txt
 🚀 How to Run
 1. Clone the repo
