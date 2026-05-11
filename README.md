@@ -8,6 +8,7 @@ Predicting how long a patient will stay in hospital using Machine Learning and D
 | Logistic Regression | 38.05% |
 | Random Forest | 38.50% |
 | Deep Learning (Keras) | **41.95%** ✅ |
+11-class classification problem; random baseline = 9%, majority-class baseline ≈ 28%. Deep learning model achieves ~1.5x improvement over majority baseline.
 
  🛠️ Tech Stack
 - **Python** — Data processing & modeling
